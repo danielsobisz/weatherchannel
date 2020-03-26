@@ -15,7 +15,7 @@ class Nav extends React.Component {
 
         })
     }
-  //mounting/demounting mobile menu
+    //mounting/demounting mobile menu
     componentDidMount() {
         window.addEventListener('resize', () => {
             this.setState({
@@ -34,9 +34,9 @@ class Nav extends React.Component {
                     ></Hamburger>
                     <div className={`menu-container ${this.state.active && 'active'}`}>
                         <ul className="menu-list">
-                            <NavLink to="/" exact className="menu-list-item" onClick={this.handleClickMenu}>Aktualna Pogoda</NavLink>
+                            <NavLink to="/weatherchannel" exact className="menu-list-item" onClick={this.handleClickMenu}>Aktualna Pogoda</NavLink>
                             <NavLink to="/daysweather" className="menu-list-item" onClick={this.handleClickMenu}>Pogoda na 5 dni</NavLink>
-                           
+
                         </ul>
                     </div>
                 </nav> : null}
@@ -44,7 +44,7 @@ class Nav extends React.Component {
                     <ul className="menu-list">
                         <NavLink to="/" exact className="menu-list-item">Aktualna Pogoda</NavLink>
                         <NavLink to="/daysweather" className="menu-list-item">Pogoda na 5 dni</NavLink>
-                        
+
                     </ul>
                 </nav>}
             </>
