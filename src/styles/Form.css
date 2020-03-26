@@ -1,0 +1,46 @@
+
+  label {
+    display: block;
+    margin: 0 auto;
+  }
+  label input {
+    text-align: center;
+    font-size: 24px;
+    display: block;
+    margin: 1% auto 2%;
+    padding: 10px;
+    width: 75%;
+    border: 0;
+    background-color: #5c5a5a;
+    color: whitesmoke;
+  }
+  label button {
+    display: block;
+    margin: 0 auto 1% auto;
+    padding: 10px 35px;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 2px;
+    border: 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: #C4C4C4;
+  }
+  @media (min-width:1023px) {
+    .form p {
+        font-size: 22px;
+      }
+      label input {
+        width: 35%;
+      }
+  }
+  @media(min-width:1025px) {
+    label button {
+      transition: .5s;
+      cursor: pointer;
+    }
+    label button:hover {
+      background-color: #285563;
+      color: whitesmoke;
+    }
+  }
