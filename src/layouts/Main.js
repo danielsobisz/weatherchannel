@@ -25,7 +25,7 @@ export default function Main() {
       <main>
         <p className="mainText">{paraText}</p>
         <Switch>
-          <Route path="/weatherchannel" exact render={props => (
+          <Route path="/" exact render={props => (
             <CurrentWeather changeOnNewRoute={changeOnNewRoute} />
           )} />
           <Route path="/daysweather" exact render={props => (
