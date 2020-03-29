@@ -7,11 +7,11 @@ import CurrentWeather from '../pages/CurrentWeather';
 function getParaText() {
   const route = window.location.pathname;
   switch (route) {
-    case "/":
+    case "/weatherchannel":
       return "Sprawdź aktualną pogodę w dowolnym mieście";
-    case "/daysweather":
+    case "/weatherchannel/daysweather":
       return "Sprawdź prognozę na 5 dni w dowolnym mieście";
-
+    default: return;
   }
 }
 

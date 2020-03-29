@@ -34,7 +34,7 @@ class Nav extends React.Component {
                     ></Hamburger>
                     <div className={`menu-container ${this.state.active && 'active'}`}>
                         <ul className="menu-list">
-                            <NavLink to="/weatherchannel" exact className="menu-list-item" onClick={this.handleClickMenu}>Aktualna Pogoda</NavLink>
+                            <NavLink to="/" exact className="menu-list-item" onClick={this.handleClickMenu}>Aktualna Pogoda</NavLink>
                             <NavLink to="/daysweather" className="menu-list-item" onClick={this.handleClickMenu}>Pogoda na 5 dni</NavLink>
 
                         </ul>
