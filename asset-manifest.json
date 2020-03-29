@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/weatherchannel/./static/css/main.5a96b8a8.chunk.css",
+    "main.js": "/weatherchannel/./static/js/main.4117e124.chunk.js",
+    "main.js.map": "/weatherchannel/./static/js/main.4117e124.chunk.js.map",
+    "runtime-main.js": "/weatherchannel/./static/js/runtime-main.e3d18a8b.js",
+    "runtime-main.js.map": "/weatherchannel/./static/js/runtime-main.e3d18a8b.js.map",
+    "static/js/2.2522ccee.chunk.js": "/weatherchannel/./static/js/2.2522ccee.chunk.js",
+    "static/js/2.2522ccee.chunk.js.map": "/weatherchannel/./static/js/2.2522ccee.chunk.js.map",
+    "index.html": "/weatherchannel/./index.html",
+    "precache-manifest.a997ba20a7a5aaa255e4f1379abea5ba.js": "/weatherchannel/./precache-manifest.a997ba20a7a5aaa255e4f1379abea5ba.js",
+    "service-worker.js": "/weatherchannel/./service-worker.js",
+    "static/css/main.5a96b8a8.chunk.css.map": "/weatherchannel/./static/css/main.5a96b8a8.chunk.css.map",
+    "static/js/2.2522ccee.chunk.js.LICENSE": "/weatherchannel/./static/js/2.2522ccee.chunk.js.LICENSE",
+    "static/media/cloud.png": "/weatherchannel/./static/media/cloud.051b6535.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3d18a8b.js",
+    "static/js/2.2522ccee.chunk.js",
+    "static/css/main.5a96b8a8.chunk.css",
+    "static/js/main.4117e124.chunk.js"
+  ]
+}
