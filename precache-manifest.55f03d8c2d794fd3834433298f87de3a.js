@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0f7fdbc76caccbcab85573c99a84fbec",
+    "revision": "530cd933f5456738fde68bf0e7545ddc",
     "url": "/weatherchannel/./index.html"
   },
   {
-    "revision": "41c8765c2e22dea30b8f",
+    "revision": "42af487288c92fd630ce",
     "url": "/weatherchannel/./static/css/main.5a96b8a8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weatherchannel/./static/js/2.2522ccee.chunk.js.LICENSE"
   },
   {
-    "revision": "41c8765c2e22dea30b8f",
-    "url": "/weatherchannel/./static/js/main.4117e124.chunk.js"
+    "revision": "42af487288c92fd630ce",
+    "url": "/weatherchannel/./static/js/main.f936ca64.chunk.js"
   },
   {
     "revision": "5efc3a0997d76b01c2b7",
