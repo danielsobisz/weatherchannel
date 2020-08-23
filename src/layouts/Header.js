@@ -3,7 +3,7 @@ import "../styles/Header.css";
 import Nav from "./Navigation";
 
 import image from "../images/cloud.png";
-const Header = props => {
+const Header = (props) => {
   return (
     <header>
       <Nav />
@@ -13,7 +13,6 @@ const Header = props => {
         </h1>
         <img src={image} alt="" className="header-image" />
       </div>
-
     </header>
   );
 };

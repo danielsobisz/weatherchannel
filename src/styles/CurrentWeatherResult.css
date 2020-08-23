@@ -10,7 +10,6 @@
 .weather-card .weather-icon {
   display: block;
   margin: 0 auto;
-
 }
 .weather-card .city {
   width: 95%;
@@ -26,17 +25,17 @@
   display: flex;
   justify-content: space-between;
   margin-left: 5vh;
-    font-size: 18px;
+  font-size: 18px;
 }
 .info p {
   padding: 5px;
 }
-@media (min-width:767px) {
+@media (min-width: 767px) {
   .weather-card {
     width: 70%;
   }
 }
-@media(min-width:1025px) {
+@media (min-width: 1025px) {
   .city-container {
     width: 40%;
   }
@@ -47,6 +46,6 @@
     font-size: 18px;
   }
   .weather-card .flex-container {
-    display:  flex;
+    display: flex;
   }
 }

@@ -5,39 +5,39 @@ import DaysWeatherResult from "../components/DaysWeatherResult";
 class DaysWeather extends React.Component {
   state = {
     value: "",
-    city: '',
+    city: "",
     dates: [],
-    categorizedDates: []
+    categorizedDates: [],
   };
-  handleCitySubmit = e => {
+  handleCityFetch = (e) => {
     e.preventDefault();
     const API = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.value}&appid=e7ef248f13087347697525b6e6672047&units=metric`;
     fetch(API)
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           return response;
         }
         throw Error("Spróbuj ponownie");
       })
-      .then(response => response.json())
-      .then(data => {
-        this.setState(prevState => ({
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState((prevState) => ({
           error: false,
           dates: data.list,
           categorizedDates: this.categorizeDates(data.list),
-          city: prevState.value
+          city: prevState.value,
         }));
       })
-      .catch(err => {
-        this.setState(prevState => ({
+      .catch((err) => {
+        this.setState((prevState) => ({
           err: true,
-          city: prevState.value
+          city: prevState.value,
         }));
       });
   };
-  categorizeDates = date => {
+  categorizeDates = (date) => {
     const dates = date
-      .map((item, i) => {
+      .map((item) => {
         return item.dt_txt.split(" ")[0];
       })
       .filter((item, i, currArr) => {
@@ -48,9 +48,8 @@ class DaysWeather extends React.Component {
     for (let theDate of dates) {
       sortedResults.push({
         name: theDate,
-        weathers: []
+        weathers: [],
       });
-
     }
 
     for (let item of date) {
@@ -64,24 +63,20 @@ class DaysWeather extends React.Component {
     }
 
     return sortedResults;
-
-
-
   };
 
-  handleChange = e => {
-    e.preventDefault();
+  handleCityNameChange = (event) => {
+    event.preventDefault();
     this.setState({
-      value: e.target.value
+      value: event.target.value,
     });
   };
-      //Change  MainText in component
+  //Change  MainText in component
   componentDidMount() {
-    const {changeOnNewRoute} = this.props
-      changeOnNewRoute();
+    const { changeOnNewRoute } = this.props;
+    changeOnNewRoute();
   }
   render() {
-    
     return (
       <>
         <Form
@@ -89,10 +84,12 @@ class DaysWeather extends React.Component {
           change={this.handleChange}
           submit={this.handleCitySubmit}
         />
-        {this.state.city ? <DaysWeatherResult
-          city={this.state.city}
-          daysList={this.state.categorizedDates}
-        /> : null}
+        {this.state.city ? (
+          <DaysWeatherResult
+            city={this.state.city}
+            daysList={this.state.categorizedDates}
+          />
+        ) : null}
       </>
     );
   }
