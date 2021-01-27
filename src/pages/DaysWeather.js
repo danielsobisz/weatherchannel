@@ -1,11 +1,11 @@
-import React from "react";
-import Form from "../components/Form";
-import "../styles/DaysWeather.css";
-import DaysWeatherResult from "../components/DaysWeatherResult";
+import React from 'react';
+import Form from '../components/Form';
+import '../styles/DaysWeather.css';
+import DaysWeatherResult from '../components/DaysWeatherResult';
 class DaysWeather extends React.Component {
   state = {
-    value: "",
-    city: "",
+    value: '',
+    city: '',
     dates: [],
     categorizedDates: [],
   };
@@ -17,7 +17,7 @@ class DaysWeather extends React.Component {
         if (response.ok) {
           return response;
         }
-        throw Error("Spróbuj ponownie");
+        throw Error('Spróbuj ponownie');
       })
       .then((response) => response.json())
       .then((data) => {
@@ -26,6 +26,7 @@ class DaysWeather extends React.Component {
           dates: data.list,
           categorizedDates: this.categorizeDates(data.list),
           city: prevState.value,
+          key: data.index,
         }));
       })
       .catch((err) => {
@@ -38,7 +39,7 @@ class DaysWeather extends React.Component {
   categorizeDates = (date) => {
     const dates = date
       .map((item) => {
-        return item.dt_txt.split(" ")[0];
+        return item.dt_txt.split(' ')[0];
       })
       .filter((item, i, currArr) => {
         return currArr.indexOf(item) === i;
@@ -53,7 +54,7 @@ class DaysWeather extends React.Component {
     }
 
     for (let item of date) {
-      let itemDate = item.dt_txt.split(" ")[0];
+      let itemDate = item.dt_txt.split(' ')[0];
 
       for (let result of sortedResults) {
         if (result.name === itemDate) {
@@ -81,8 +82,8 @@ class DaysWeather extends React.Component {
       <>
         <Form
           value={this.state.value}
-          change={this.handleChange}
-          submit={this.handleCitySubmit}
+          change={this.handleCityNameChange}
+          submit={this.handleCityFetch}
         />
         {this.state.city ? (
           <DaysWeatherResult
